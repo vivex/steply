@@ -1,5 +1,10 @@
 <?php
 
+// Update CSS within in Admin
+function admin_style() {
+    wp_enqueue_style('admin-styles', plugins_url('/css/admin.css', __FILE__));
+}
+add_action('admin_enqueue_scripts', 'admin_style');
 
 function steply_register_settings() {
     add_option( 'steply_main_color', '#93b874');
@@ -13,7 +18,7 @@ add_action( 'admin_init', 'steply_register_settings' );
 
 function steply_options_page(){
     ?>
-    <div>
+    <div class="steps-admin">
         <?php screen_icon(); ?>
         <h2>Steply Settings</h2>
         <form method="post" action="options.php">
@@ -31,6 +36,16 @@ function steply_options_page(){
             </table>
             <?php  submit_button(); ?>
         </form>
+
+        <h2>How to use Steply</h2>
+
+        <p>Use Following Short-codes in your Post/Page</p>
+        <pre>
+        [steply_wrapper]
+            [steply_step step-number='1' title='Step Title']
+                  Step Content
+            [/steply_step]
+        [/steply_wrapper]</pre>
     </div>
     <?php
 }

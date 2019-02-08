@@ -6,7 +6,7 @@ description: Adds wikihow style step by step UI, good for tutorial websites
 Version: 1.0
 Author: Vivek Soni
 Author URI: http://vivex.me
-License: MIT
+License: GPLv2
 */
 
 function steply_wrapper_shortcode($atts = array(), $content = "")
@@ -54,7 +54,7 @@ EOD;
 
 function add_steply_styles()
 {
-    wp_enqueue_style('steply_css', plugins_url('/style.css', __FILE__));
+    wp_enqueue_style('steply_css', plugins_url('/css/style.css', __FILE__));
 }
 
 add_action('wp_enqueue_scripts', 'add_steply_styles');
