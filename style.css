@@ -1,0 +1,27 @@
+:root {
+    --main-color: #93b874;
+    --text-color: #fff;
+}
+.steps .step-wrapper > .step-title {
+    border-bottom: 1px solid  var(--main-color);
+}
+.steps .step-wrapper > .step-title > h3 {
+    margin-bottom:0px;
+    display: table;
+}
+.steps .step-wrapper > .step-title > h3 >.step-number {
+    background: var(--main-color);
+    color: var(--text-color);
+    padding: 2px 16px;
+    padding-bottom: 3px;
+    display: inline-block;
+    text-align: center;
+    margin-bottom: 0px;
+    font-size: 0.6em;
+}
+.steps .step-wrapper > .step-title > h3 >.step-heading{
+    display: table-cell;
+    vertical-align: middle;
+    padding-left: 1em;
+
+}
