@@ -1,10 +1,10 @@
 <?php
 
 // Update CSS within in Admin
-function admin_style() {
+function steply_admin_style() {
     wp_enqueue_style('admin-styles', plugins_url('/css/admin.css', __FILE__));
 }
-add_action('admin_enqueue_scripts', 'admin_style');
+add_action('admin_enqueue_scripts', 'steply_admin_style');
 
 function steply_register_settings() {
     add_option( 'steply_main_color', '#93b874');
@@ -14,7 +14,6 @@ function steply_register_settings() {
 }
 
 add_action( 'admin_init', 'steply_register_settings' );
-
 
 function steply_options_page(){
     ?>

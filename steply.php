@@ -52,12 +52,12 @@ EOD;
     return $str;
 }
 
-function add_steply_styles()
+function steply_add_styles()
 {
     wp_enqueue_style('steply_css', plugins_url('/css/style.css', __FILE__));
 }
 
-add_action('wp_enqueue_scripts', 'add_steply_styles');
+add_action('wp_enqueue_scripts', 'steply_add_styles');
 add_shortcode('steply_step', 'steply_step_shortcode');
 add_shortcode('steply_wrapper', 'steply_wrapper_shortcode');
 
