@@ -3,7 +3,7 @@
 Plugin Name: Steply
 Plugin URI: http://vivex.me/steply
 description: Adds wikihow style step by step UI, good for tutorial websites
-Version: 1.0
+Version: 0.1
 Author: Vivek Soni
 Author URI: http://vivex.me
 License: GPLv2
